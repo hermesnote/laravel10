@@ -4,9 +4,16 @@
 
         <!-- Name -->
         <div>
-            <x-input-label for="name" :value="__('使用者代號')" />
+            <x-input-label for="name" :value="__('姓名')" />
             <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
+        </div>
+
+        <!-- userName -->
+        <div class="mt-4">
+            <x-input-label for="username" :value="__('使用者名稱')" />
+            <x-text-input id="username" class="block mt-1 w-full" type="text" name="username" :value="old('username')" required autofocus autocomplete="username" />
+            <x-input-error :messages="$errors->get('username')" class="mt-2" />
         </div>
 
         <!-- Email Address -->
@@ -30,7 +37,7 @@
 
         <!-- Confirm Password -->
         <div class="mt-4">
-            <x-input-label for="password_confirmation" :value="__('再次輸入密碼')" />
+            <x-input-label for="password_confirmation" :value="__('確認密碼')" />
 
             <x-text-input id="password_confirmation" class="block mt-1 w-full"
                             type="password"

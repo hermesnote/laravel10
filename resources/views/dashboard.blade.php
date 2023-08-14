@@ -9,7 +9,9 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
-                    {{ __("您已經登入成功!") }}
+                    <p>{{ __("您已經成功登入!") }}</p>
+                    <p>使用者名稱：{{ Auth::user()->name }}</p>
+                    <p>電子郵件：{{ Auth::user()->email }}</p>
                 </div>
             </div>
         </div>
